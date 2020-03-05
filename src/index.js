@@ -114,14 +114,13 @@ const renderProviderBySpecialty = (provider) => {
 		subMenu.append(subMenuItem)
 	}
 }
-
+//----------provider details on main, top div--------//
 const getProviderDetails = (provider) => {
 	provider.id = providerID
 	fetch('http://localhost:3000/providers/' + provider.id)
-	
+
 }
-	//fetch a single provider 
-	//e.g., to show in provider inner div
+
 const renderProviderDetails
 	//renders single providers info
 	//if providerID = provider.id, add/edit-ProviderDetailBtn display:block, else display:none
@@ -162,13 +161,13 @@ const loginHandler = () => {
 }
 //specialty (sidebar) handler (point to fetch fn to get providers)
 const selectSpecialtyHandler = () => {
-	if (event.target.tagName === "A") {
+	if (event.target.tagName === "BUTTON") {
 		getProvidersBySpecialty()
 	}
 }
 //provider (sidebar submenu) handler (point to fetch fn for single provider AND point to another fetch fn for services)
 const subMenuSelectionHandler = () => {
-	if (event.target.tagname === )
+	if (event.target.tagname === "A")
 }
 //edit provider info handler (points to fetch-get fn on provider)
 //save provider info handler (points to fetch-patch fn on provider)
